@@ -1,0 +1,94 @@
+﻿@model List<ResultAppUserDto>
+
+@{
+    ViewData["Title"] = "Billas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string[] desiredDepartments = new string[] { "Yönetim", "Satış", "İnsan Kaynakları", "Finans", "Muhasebe", "Bilgi İşlem", "Satınalma", "Depo", "Bakım Arıza", "İdari İşler" };
+
+}
+
+<div class="container" style="max-width:100%;overflow-x:auto;">
+    <h1 style="text-align:center;">Billas Personel Listesi</h1>
+    <br />
+
+    <table class="table table-bordered" style="width:100%">
+        <div>
+        </div>
+        <thead>
+            <tr style="text-align:center">
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var departmentName in desiredDepartments)
+            {
+                var departmentGroup = Model.Where(p => p.Department == departmentName);
+                if (departmentGroup.Any())
+                {
+                    <tr>
+                        <td colspan="10" style="text-align:center; font-weight: bold; background-color: lightgray;">@departmentName</td>
+                    </tr>
+
+                    <tr style="text-align:center">
+                        <th style="width:140px;text-align:center">Ad Soyad</th>
+                        <th style="width:140px;text-align:center">Departman</th>
+                        <th style="width:140px;text-align:center">Tittle</th>                        
+                        <th style="width:140px;text-align:center">Email</th>
+                        <th style="width:140px;text-align:center">Dahili</th>
+                        <th style="width:140px;text-align:center">Cep Telefonu</th>
+                        <th style="width:140px;text-align:center">Kısa Kod</th>
+                        <th style="width:140px;text-align:center">Şirket</th>
+                    </tr>
+
+                    foreach (var personel in departmentGroup)
+                    {
+                        <tr>
+                            <td style="width:140px;text-align:center">@personel.Name @personel.Surname</td>
+                            <td style="width:140px;text-align:center">@personel.Department</td>
+                            <td style="width:140px;text-align:center">@personel.Tittle</td>                            
+                            <td style="width:140px;text-align:center">@personel.Email</td>
+                            <td style="width:140px;text-align:center">@personel.Dahili</td>
+                            <td style="width:140px;text-align:center">@personel.CepTel</td>
+                            <td style="width:140px;text-align:center">@personel.KisaKod</td>
+                            <td style="width:140px;text-align:center">@personel.Company</td>
+                        </tr>
+                    }
+                }
+            }
+
+            @foreach (var departmentName in Model.Select(p => p.Department).Distinct().Except(desiredDepartments))
+            {
+                var departmentGroup = Model.Where(p => p.Department == departmentName);
+                if (departmentGroup.Any())
+                {
+                    <tr>
+                        <td colspan="10" style="text-align:center; font-weight: bold; background-color: lightgray;">@departmentName</td>
+                    </tr>
+                    <tr style="text-align:center">
+                        <th style="width:140px;text-align:center">Ad Soyad</th>
+                        <th style="width:140px;text-align:center">Departman</th>
+                        <th style="width:140px;text-align:center">Tittle</th>                        
+                        <th style="width:140px;text-align:center">Email</th>
+                        <th style="width:140px;text-align:center">Dahili</th>
+                        <th style="width:140px;text-align:center">Cep Telefonu</th>
+                        <th style="width:140px;text-align:center">Kısa Kod</th>
+                        <th style="width:140px;text-align:center">Şirket</th>
+                    </tr>
+                    foreach (var personel in departmentGroup)
+                    {
+                        <tr style="text-align:center;">
+                            <td>@personel.Name @personel.Surname</td>
+                            <td>@personel.Department</td>
+                            <td>@personel.Tittle</td>                            
+                            <td>@personel.Email</td>
+                            <td>@personel.Dahili</td>
+                            <td>@personel.CepTel</td>
+                            <td>@personel.KisaKod</td>
+                            <td>@personel.Company</td>
+                        </tr>
+                    }
+                }
+            }
+        </tbody>
+    </table>
+</div>

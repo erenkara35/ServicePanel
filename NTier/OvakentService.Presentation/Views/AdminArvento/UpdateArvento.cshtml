@@ -1,0 +1,54 @@
+﻿@model UpdateArventoDto
+@{
+    ViewData["Title"] = "UpdateArvento";
+    Layout = "~/Views/_AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> Arvento Güncelleme Alanı</h4>
+                        <form method="post">
+                            <input type="hidden" asp-for="Id" />
+                            <div class="form-group">
+                                <label for="exampleInputCihazNo">Arvento Cihaz No</label>
+                                <input required="" type="text" class="form-control" id="exampleInputCihazNo" asp-for="ArventoCihazNo" placeholder="Cihaz No Girin.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputCihazGrup">Arvento Cihaz Grup</label>
+                                <input required="" type="text" class="form-control" id="exampleInputCihazGrup" asp-for="ArventoCihazGrup" placeholder="Cihaz Grubu Girin.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputImei">Imei</label>
+                                <input required="" type="text" class="form-control" id="exampleInputImei" asp-for="Imei" placeholder="Imei Girin.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputImsi">Imsi</label>
+                                <input required="" type="text" class="form-control" id="exampleInputImsi" asp-for="Imsi" placeholder="Imsi Girin.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputYazVersion">Yazılım Versiyonu</label>
+                                <input required="" type="text" class="form-control" id="exampleInputYazVersion" asp-for="YazVersiyon" placeholder="Yazılım Versiyonu Girin.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDonVersion">Donanım Versiyonu</label>
+                                <input required="" type="text" class="form-control" id="exampleInputDonVersion" asp-for="DonVersiyon" placeholder="Donanım Versiyonu Girin.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputIsActive">Aktif Mi?</label>
+                                <select class="form-control" id="exampleInputIsActive" asp-for="IsActive">
+                                    <option value="true">Aktif</option>
+                                    <option value="false">Pasif</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Arvento Güncelle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

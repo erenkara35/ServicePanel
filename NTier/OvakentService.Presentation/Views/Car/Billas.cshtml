@@ -1,0 +1,48 @@
+﻿@model List<ResultCarDto>
+
+@{
+    ViewData["Title"] = "Billas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="max-width:100%;overflow-x:auto;">
+    <h1>Billas Araç Listesi</h1>
+
+    <table class="table table-bordered" style="width:100%">
+        <thead>
+            <tr style="text-align:center">
+                <th>Araç Resmi</th>
+                <th>Plaka</th>
+                <th>Marka ~ Model</th>
+                <th>Araç Yüklü Ağırlığı</th>
+                <th>Araç Tip 1</th>
+                <th>Araç Tip 2</th>
+                <th>Araç Sınıfı</th>
+                <th>Lokasyonu</th>
+                <th>Logo</th>
+                <th>Araç Personeli</th>
+                <th>Yılı</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr style="text-align:center">
+                    <td align="center" valign="middle">
+                        <img src="@item.ImageUrl" style="border-radius: 7px;border:1px; solid #bbb9b9; max-width:145px;" />
+                    </td>
+                    <td align="center" style="width:150;">@item.Plate</td>
+                    <td align="center">@item.Brand @item.CarModel</td>
+                    <td align="center">@item.Weight</td>                    
+                    <td align="center">@item.CarType1</td>
+                    <td align="center">@item.CarType2</td>
+                    <td align="center">@item.CarClass</td>
+                    <td align="center">@item.Location</td>
+                    <td align="center">@item.Logo</td>
+                    <td align="center">@item.Username</td>
+                    <td align="center">@item.ModelYear</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,90 @@
+﻿@model UpdateCarDto
+
+@{
+    ViewData["Title"] = "UpdateCar";
+    Layout = "~/Views/_AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Araç Güncelleme Alanı</h4>
+                        <form method="post" enctype="multipart/form-data">
+                            <input type="hidden" asp-for="Id" />
+                            <input asp-for="ImageUrl" hidden />
+                            <div class="form-group">
+                                <label for="exampleInputPlate">Plaka</label>
+                                <input required="" type="text" class="form-control" id="exampleInputPlate" asp-for="Plate" placeholder="Plaka Giriniz.">
+                                <span asp-validation-for="Plate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputBrand">Marka</label>
+                                <input required="" type="text" class="form-control" id="exampleInputBrand" asp-for="Brand" placeholder="Marka Giriniz.">
+                                <span asp-validation-for="Brand" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputModel">Model</label>
+                                <input required="" type="text" class="form-control" id="exampleInputModel" asp-for="CarModel" placeholder="Model Giriniz.">
+                                <span asp-validation-for="CarModel" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputYear">Model Yılı</label>
+                                <input required="" type="text" class="form-control" id="exampleInputYear" asp-for="ModelYear" placeholder="Model Yılı Giriniz.">
+                                <span asp-validation-for="ModelYear" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputImageUrl">Görsel Yükleyin</label>
+                                <input type="file" name="file" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputHGSNo">HGS No</label>
+                                <input required="" type="text" class="form-control" id="exampleInputHGSNo" asp-for="HGSNo" placeholder="HGS Numarası Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputMuayeneTarihi">Muayene Tarihi</label>
+                                <input required="" type="date" class="form-control" id="exampleInputMuayeneTarihi" asp-for="MuayeneTarihi" placeholder="Muayene Tarihi Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputCarType1">Araç Tipi 1</label>
+                                <input required="" type="text" class="form-control" id="exampleInputCarType1" asp-for="CarType1" placeholder="Araç Tipi 1 Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputCarType2">Araç Tipi 2</label>
+                                <input required=""  type="text" class="form-control" id="exampleInputCarType2" asp-for="CarType2" placeholder="Araç Tipi 2 Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputCarClass">Araç Sınıfı</label>
+                                <input required="" type="text" class="form-control" id="exampleInputCarClass" asp-for="CarClass" placeholder="Araç Sınıfı Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputLocation">Lokasyon</label>
+                                <input required="" type="text" class="form-control" id="exampleInputLocation" asp-for="Location" placeholder="Araç Lokasyonu Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputLogo">Logo</label>
+                                <input required="" type="text" class="form-control" id="exampleInputLogo" asp-for="Logo" placeholder="Logo Türü">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputWeight">Araç Yük Kapasitesi</label>
+                                <input required="" type="text" class="form-control" id="exampleInputWeight" asp-for="Weight" placeholder="Araç Yük Kapasitesi">
+                                
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputCarPerson">Araç Personeli</label>
+                                <select asp-items="ViewBag.userList" class="form-control" id="exampleInputCarPerson" asp-for="AppUserId" placeholder="Personel Seçiniz"></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputArvento">Araç Arvento</label>
+                                <select class="form-control" id="exampleInputArvento" asp-items="ViewBag.arventoList" asp-for="ArventoId" placeholder="Arvento Seçiniz"></select>
+                            </div>
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Araç Güncelle</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

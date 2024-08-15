@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35118.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NTier", "NTier", "{A1CEBDC5-A829-4A13-8881-0E743BC8E43A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OvakentService.Presentation", "NTier\OvakentService.Presentation\OvakentService.Presentation.csproj", "{C5EF200E-1274-4342-8D89-C1AF96B3DE33}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OvakentService.BusinessLogic", "NTier\OvakentService.BusinessLogic\OvakentService.BusinessLogic.csproj", "{33B38929-5956-4739-AD03-8DEC9A7BE39D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OvakentService.DataAccessLayer", "NTier\OvakentService.DataAccessLayer\OvakentService.DataAccessLayer.csproj", "{1D105A76-2A0F-4819-A468-29C4424BD3D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OvakentService.DtoLayer", "NTier\OvakentService.DtoLayer\OvakentService.DtoLayer.csproj", "{BD61769F-3DF3-4392-9CA0-E2A9C04F633D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OvakentService.EntityLayer", "NTier\OvakentService.EntityLayer\OvakentService.EntityLayer.csproj", "{92B1D213-8E3D-4F43-98FE-29C659C66FD7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5EF200E-1274-4342-8D89-C1AF96B3DE33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5EF200E-1274-4342-8D89-C1AF96B3DE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5EF200E-1274-4342-8D89-C1AF96B3DE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5EF200E-1274-4342-8D89-C1AF96B3DE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33B38929-5956-4739-AD03-8DEC9A7BE39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33B38929-5956-4739-AD03-8DEC9A7BE39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33B38929-5956-4739-AD03-8DEC9A7BE39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33B38929-5956-4739-AD03-8DEC9A7BE39D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D105A76-2A0F-4819-A468-29C4424BD3D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D105A76-2A0F-4819-A468-29C4424BD3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D105A76-2A0F-4819-A468-29C4424BD3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D105A76-2A0F-4819-A468-29C4424BD3D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD61769F-3DF3-4392-9CA0-E2A9C04F633D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD61769F-3DF3-4392-9CA0-E2A9C04F633D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD61769F-3DF3-4392-9CA0-E2A9C04F633D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD61769F-3DF3-4392-9CA0-E2A9C04F633D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92B1D213-8E3D-4F43-98FE-29C659C66FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92B1D213-8E3D-4F43-98FE-29C659C66FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92B1D213-8E3D-4F43-98FE-29C659C66FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92B1D213-8E3D-4F43-98FE-29C659C66FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5EF200E-1274-4342-8D89-C1AF96B3DE33} = {A1CEBDC5-A829-4A13-8881-0E743BC8E43A}
+		{33B38929-5956-4739-AD03-8DEC9A7BE39D} = {A1CEBDC5-A829-4A13-8881-0E743BC8E43A}
+		{1D105A76-2A0F-4819-A468-29C4424BD3D2} = {A1CEBDC5-A829-4A13-8881-0E743BC8E43A}
+		{BD61769F-3DF3-4392-9CA0-E2A9C04F633D} = {A1CEBDC5-A829-4A13-8881-0E743BC8E43A}
+		{92B1D213-8E3D-4F43-98FE-29C659C66FD7} = {A1CEBDC5-A829-4A13-8881-0E743BC8E43A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3B6920D1-2375-4604-8352-919BBDFE2F87}
+	EndGlobalSection
+EndGlobal

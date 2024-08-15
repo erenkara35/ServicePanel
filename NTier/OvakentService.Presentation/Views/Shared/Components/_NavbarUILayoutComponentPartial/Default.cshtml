@@ -1,0 +1,27 @@
+﻿<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+
+        <a href="/Profile/Index/" title="OVAKENT - Lastik ve Kauçuk A.Ş.">
+            <img src="~/images/ovakent_Logo.png" width="250" height="100" />
+        </a>
+
+
+
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                @if ((User.IsInRole(UserRoles.RoleAdmin)) || (User.IsInRole(UserRoles.RoleIk)))
+                {
+                    <li class="nav-item"><a href="/AdminUser/Index/" class="nav-link">Admin Ekranı</a></li>
+                    <li class="nav-item"><a href="/Car/Index/" class="nav-link">Araçlar</a></li>
+                    <li class="nav-item"><a href="/Arvento/Index/" class="nav-link">Arventolar</a></li>
+                }
+                <li class="nav-item"><a href="/Profile/Index/" class="nav-link">Ana Sayfa</a></li>
+                <li class="nav-item"><a href="/Personel/Index/" class="nav-link">Personeller</a></li>
+
+                <li class="nav-item"><a href="/Login/Logout/" class="nav-link">Çıkış Yap</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

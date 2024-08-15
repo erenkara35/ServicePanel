@@ -1,0 +1,50 @@
+﻿@model LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ovakent - Kullanıcı Girişi</title>    
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="~/register/css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/register/css/style.css" type="text/css" media="all">
+    <link href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+</head>
+<body>
+    <h1>Ovakent Servis Giriş Ekranı</h1>
+    <div class="w3layoutscontaineragileits">
+        <form method="post">
+
+            <br /><br />           
+
+            <input required="" type="text" asp-for="Email" placeholder="Lütfen Email Adresinizi Giriniz">
+
+            <input required="" type="password" text="Test1!" asp-for="Password" placeholder="Lütfen Şifrenizi Giriniz">
+
+            <div class="text-white" asp-validation-summary="ModelOnly"></div>
+
+            <br /><br />
+
+            <ul class="agileinfotickwthree">
+                <li>
+                    <input type="checkbox" id="brand1" value="">
+                    <label for="brand1"><span></span>Beni Hatırla</label>
+                    <a href="/Register/Index/">Bir Hesabınız Yok Mu?</a>
+                </li>
+            </ul>
+            <div class="aitssendbuttonw3ls">
+                <input type="submit" value="Giriş Yap">
+                <p> Ovakent Web Sitesi İçin <span>→</span> <a class="w3_play_icon1" href="https://www.Ovakent.com.tr"> Ovakent </a></p>
+                <p> Billas Web Sitesi İçin <span>→</span> <a class="w3_play_icon1" href="https://www.Billas.com.tr"> Billas </a></p>
+                <div class="clear"></div>
+            </div>
+        </form>
+    </div>
+    <div class="w3footeragile">
+        <p> &copy; @DateTime.Now.Year Ovakent ~ Billas Giriş Paneli. Tüm Hakları Saklıdır | Design by <a href="https://www.ovakent.com.tr" target="_blank">BT Department</a></p>
+    </div>
+    <script type="text/javascript" src="~/register/js/jquery-2.1.4.min.js"></script>   
+</body>
+</html>

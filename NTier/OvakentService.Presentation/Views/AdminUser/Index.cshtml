@@ -1,0 +1,66 @@
+﻿@model List<ResultAppUserDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <a href="/AdminUser/CreateUser/" class="btn btn-outline-success">Yeni Personel Ekle</a><br /><br />
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Personel Listesi</h4>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Adı Soyadı</th>
+                                        <th>Email Adresi</th>
+                                        <th>Departman</th>
+                                        <th>Ünvan</th>
+                                        <th>Şirket</th>
+                                        <th>Cep Telefonu</th>
+                                        <th>Dahili</th>
+                                        <th>Kısa Kod</th>
+                                        <th>Kullanıcı Adı</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th>Roller</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.Id</td>
+                                            <td>@item.Name @item.Surname</td>
+                                            <td>@item.Email</td>
+                                            <td>@item.Department</td>
+                                            <td>@item.Tittle</td>
+                                            <td>@item.Company</td>
+                                            <td>@item.CepTel</td>
+                                            <td>@item.Dahili</td>
+                                            <td>@item.KisaKod</td>
+                                            <td>@item.Username</td>                                            
+                                            <td><a href="/AdminUser/UpdateUser/@item.Id" class="btn btn-outline-primary">Güncelle</a></td>
+                                            <td><a href="/AdminUser/RemoveUser/@item.Id" class="btn btn-outline-danger">Sil</a></td>
+                                            <td>
+                                                <user-role-names user-id="@item.Id"></user-role-names>
+                                            </td>
+                                            <td><a href="/AdminRole/UserRole/@item.Id" class="btn btn-outline-success">Rol Ata</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/AdminUser/CreateUser/" class="btn btn-outline-success">Yeni Personel Ekle</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

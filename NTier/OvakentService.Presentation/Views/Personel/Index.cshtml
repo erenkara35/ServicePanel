@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+<p style="text-align:center">Personel bilgilerini görüntülemek için lütfen bir seçim yapın.</p>
+<div class="d-flex justify-content-center">    
+    <section>
+        <div>
+            <a asp-controller="Personel" asp-action="Ovakent" class="btn btn-primary btn-lg" style="width:150px">Ovakent</a>
+        </div>
+    </section>
+</div>
+<br />
+<div class="d-flex justify-content-center">
+    <section>
+        <div>
+            <a asp-controller="Personel" asp-action="Billas" class="btn btn-primary btn-lg" style="width:150px">Billas</a>
+        </div>
+    </section>
+</div>
+<br />

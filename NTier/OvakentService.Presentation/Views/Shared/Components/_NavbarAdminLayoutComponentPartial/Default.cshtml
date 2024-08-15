@@ -1,0 +1,57 @@
+﻿<header id="page-topbar">
+    <div class="navbar-header">
+
+        <div class="d-flex align-items-left">
+            <button type="button" class="btn btn-sm mr-2 d-lg-none px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+
+            <div class="dropdown d-none d-sm-inline-block">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="mdi mdi-plus"></i> Yeni Oluştur
+                    <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                </button>
+                <div class="dropdown-menu">
+                    <a href="/AdminUser/CreateUser/" class="dropdown-item notify-item">
+                        Personel
+                    </a>
+                    <a href="/AdminCar/CreateCar/" class="dropdown-item notify-item">
+                        Araç
+                    </a>
+                    <a href="/AdminArvento/CreateArvento/" class="dropdown-item notify-item">
+                        Arvento
+                    </a>
+                    <a href="/AdminRole/Create/Role/" class="dropdown-item notify-item">
+                        Rol
+                    </a>
+                    <a href="/Profile/Index/" class="dropdown-item notify-item">
+                        Siteye Git
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="dropdown d-inline-block ml-2">
+                <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img class="rounded-circle header-profile-user" src="~/assets/images/users/avatar-3.jpg"
+                         alt="Header Avatar">
+                    <span class="d-none d-sm-inline-block ml-1">@User.Identity.Name</span>
+                    <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">                    
+                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="/Profile/Index/">
+                        <span>Profilim</span>                        
+                    </a>
+                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="/Login/Logout/">
+                        <span>Çıkış Yap</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>

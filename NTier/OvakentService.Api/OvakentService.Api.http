@@ -1,0 +1,6 @@
+@OvakentService.Api_HostAddress = http://localhost:5120
+
+GET {{OvakentService.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

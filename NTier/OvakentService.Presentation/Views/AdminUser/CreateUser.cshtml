@@ -1,0 +1,90 @@
+﻿@model CreateAppUserDto
+
+@{
+    ViewData["Title"] = "CreateUser";
+    Layout = "~/Views/_AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Yeni Personel Bilgisi Alanı</h4>
+                        <form method="post">
+                            <div class="form-group">
+                                <label for="exampleInputName">Adı</label>
+                                <input required="" type="text" class="form-control" id="exampleInputName" asp-for="Name" placeholder="Personel Adını Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputSurname">Soyadı</label>
+                                <input required="" type="text" class="form-control" id="exampleInputSurname" asp-for="Surname" placeholder="Personel Soyadını Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail">E-Posta Adresi</label>
+                                <input required="" type="email" class="form-control" id="exampleInputEmail" asp-for="Email" placeholder="E-Mail Adresini Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputDepartment">Departman</label>
+                                <select class="form-control" id="exampleInputDepartment" asp-for="Department" placeholder="Departman Seçiniz..">
+                                    <option value="Muhasebe">Muhasebe</option>
+                                    <option value="Finans">Finans</option>
+                                    <option value="Yönetim">Yönetim</option>
+                                    <option value="Bilgi İşlem">Bilgi İşlem</option>
+                                    <option value="Satış">Satış</option>
+                                    <option value="İK">İnsan Kaynakları</option>
+                                    <option value="Satınalma">Satınalma</option>
+                                    <option value="Depo">Depo</option>
+                                    <option value="İdari İşler">İdari İşler</option>
+                                    <option value="Bakım">Bakım</option>
+                                    <option value="Üretim">Üretim</option>
+                                    <option value="Yemekhane">Yemekhane</option>
+                                    <option value="İhracat">İhracat</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputCompany">Şirket</label>
+                                <select class="form-control" id="exampleInputCompany" asp-for="Company" placeholder="Şirket Seçiniz.">
+                                    <option value="Ovakent">Ovakent</option>
+                                    <option value="Billas">Billas</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputTittle">Ünvan</label>
+                                <input required="" type="text" class="form-control" id="exampleInputTittle" asp-for="Tittle" placeholder="Personel Ünvanı Giriniz.">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="exampleInputDial">Dahili</label>
+                                <input required="" type="text" class="form-control" id="exampleInputDial" asp-for="Dahili" placeholder="Dahili No. Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputMobilePhone">Cep Telefonu</label>
+                                <input required="" type="tel" class="form-control" id="exampleInputMobilePhone" asp-for="CepTel" placeholder="Cep Telefonu Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputKisaKod">Kısa Kodu</label>
+                                <input required="" type="text" class="form-control" id="exampleInputKisaKod" asp-for="KisaKod" placeholder="Kısa Kod Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword">Şifre</label>
+                                <input required="" type="password" class="form-control" id="exampleInputPassword" asp-for="Password" placeholder="Şifre Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputConfirmPassword">Şifre Tekrar</label>
+                                <input required="" type="password" class="form-control" id="exampleInputConfirmPassword" asp-for="ConfirmPassword" placeholder="Şifre Tekrarını Giriniz.">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputUsername">Kullanıcı Adı</label>
+                                <input required="" type="text" class="form-control" id="exampleInputUsername" asp-for="Username" placeholder="Kullanıcı Adı Giriniz.">
+                            </div>
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">Personeli Kaydet</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@model List<AssignRoleToUserViewModel>
+@{
+    ViewData["Title"] = "UserRole";
+    Layout = "~/Views/_AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Rol Atama Alanı</h4>
+
+                        <form method="post" asp-route-userId="@ViewBag.userId">
+
+                            @for (int i = 0; i < Model.Count; i++)
+                            {
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" asp-for="@Model[i].Exist" />
+                                    <label>@Model[i].Name</label>
+
+                                    <input type="hidden" asp-for="@Model[i].Name" />
+                                    <input type="hidden" asp-for="@Model[i].Id" />
+
+                                </div>
+                            }
+
+                            <button type="submit" class="btn btn-primary waves-effect waves-light"> Rol Ata</button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

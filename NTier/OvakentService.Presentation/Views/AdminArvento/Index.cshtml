@@ -1,0 +1,70 @@
+﻿@model List<ResultArventoDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/_AdminLayout/Index.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <a href="/AdminArvento/CreateArvento/" class="btn btn-outline-success">Yeni Arvento Ekle</a><br /><br />
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Arvento Listesi</h4>
+                        <div class="table-responsive">
+                            <table class="table mb-0">
+                                <thead>
+                                    <tr style="text-align:center">
+                                        <th>#</th>
+                                        <th>Arvento Cihaz No</th>
+                                        <th>Arvento Cihaz Grup</th>
+                                        <th>Imei</th>
+                                        <th>Imsi</th>
+                                        <th>Yazılım Versiyonu</th>
+                                        <th>Donanım Versiyonu</th>
+                                        <th>Aktif Mi?</th>
+                                        <th>Kayıt Tarihi</th>
+                                        <th>Güncelleme Tarihi</th>
+                                        <th></th>
+                                        <th></th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr style="text-align:center">
+
+                                            <td align="center">@item.Id</td>
+                                            <td align="center">@item.ArventoCihazNo</td>
+                                            <td align="center">@item.ArventoCihazGrup</td>
+                                            <td align="center">@item.Imei</td>
+                                            <td align="center">@item.Imsi</td>
+                                            <td align="center">@item.YazVersiyon</td>
+                                            <td align="center">@item.DonVersiyon</td>
+                                            @if (item.IsActive == true)
+                                            {
+                                                <td align="center">Aktif</td>
+                                            }
+                                            else
+                                            {
+                                                <td align="center">Pasif</td>
+                                            }
+                                            <td align="center">@item.RegisterDate</td>
+                                            <td align="center">@item.UpdateDate</td>
+                                            <td><a href="/AdminArvento/UpdateArvento/@item.Id" class="btn btn-outline-success">Güncelle</a></td>
+                                            <td><a href="/AdminArvento/RemoveArvento/@item.Id" class="btn btn-outline-danger">Sil</a></td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                            <a href="/AdminArvento/CreateArvento/" class="btn btn-outline-success">Yeni Arvento Ekle</a><br /><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
